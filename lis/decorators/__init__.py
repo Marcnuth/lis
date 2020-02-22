@@ -3,7 +3,7 @@ from functools import wraps, partial
 from time import time
 
 
-logger = logging.getLogger('serving')
+logger = logging.getLogger(__name__)
 
 
 def safe_or(default=None, swallows=[AssertionError]):

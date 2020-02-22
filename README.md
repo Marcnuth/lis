@@ -17,12 +17,26 @@ pip install lis
 import lis
 
 # import specific module or function
-from lis import safe_or
+from lis.decorators import safe_or
 ```
 
 
 ## Modules
 
+- decorators
+    - safe_or
+    - timeit
+- collections
+    - objectize
+- streaming
+    - streaming
+
+
+## Tests
+
+```
+python -m pytest tests -s
+```
 
 ## Contribution
 
