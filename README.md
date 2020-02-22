@@ -21,15 +21,32 @@ from lis.decorators import safe_or
 ```
 
 
-## Modules
+## API Reference
 
-- decorators
-    - safe_or
-    - timeit
-- collections
-    - objectize
-- streaming
-    - streaming
+#### Decorators
+
+##### lis.decorators.safe_or
+
+##### lis.decorators.timeit
+
+#### Collections
+
+##### lis.collections.objectize
+
+> lis.collections.objectize(data, recursive=True)
+
+Convert a dictionary to object, and access the keys via attributes.
+
+Parameters:
+- data: _dict_
+    Input dictionary
+- recursive: _bool, optional_
+    convert the data recursively if this is set as True.
+
+#### streaming
+
+##### lis.streaming.streaming
+
 
 
 ## Tests

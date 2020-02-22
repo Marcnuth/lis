@@ -17,3 +17,9 @@ def test_recur_objectize():
     assert obj.b.l2b.l3a == data['b']['l2b']['l3a']
     assert obj.b.l2b.l3b == data['b']['l2b']['l3b']
     assert obj.c == data['c']
+
+    obj2 = objectize(data, recursive=False)
+    assert obj2.a == data['a']
+    assert obj2.b == data['b']
+    assert isinstance(obj2.b, dict)
+    assert obj2.c == data['c']

@@ -3,7 +3,11 @@ class ObjectView(object):
         self.__dict__ = data
 
 
-def objectize(data):
+def objectize(data, recursive=True):
     if not isinstance(data, dict):
         return data
-    return ObjectView(dict([(k, objectize(v)) for k, v in data.items()]))
+
+    if recursive:
+        return ObjectView(dict([(k, objectize(v)) for k, v in data.items()]))
+    else:
+        return ObjectView(data)
