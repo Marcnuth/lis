@@ -1,0 +1,20 @@
+[MESSAGES CONTROL]
+disable=
+    fixme,
+    broad-except,
+    protected-access,
+    no-member,
+    pointless-statement,
+    bare-except,
+    invalid-name,
+    wrong-import-order,
+    line-too-long,
+    logging-format-interpolation,
+    missing-docstring,
+    too-few-public-methods,
+    no-self-use,
+    unused-argument
+
+[DESIGN]
+# Maximum number of parents for a class (see R0901).
+max-parents=15
