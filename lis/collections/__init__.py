@@ -3,6 +3,7 @@ class ObjectView(object):
         self.__dict__ = data
 
 
-def objectize(dict_data: dict):
-    assert isinstance(dict_data, dict), 'only dict type are supported'
-    return ObjectView(dict_data)
+def objectize(data):
+    if not isinstance(data, dict):
+        return data
+    return ObjectView(dict([(k, objectize(v)) for k, v in data.items()]))
